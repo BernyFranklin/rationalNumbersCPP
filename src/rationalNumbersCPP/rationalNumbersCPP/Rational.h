@@ -5,6 +5,7 @@
 
 #ifndef Rational_h   // If this isn't defined already
 #define Rational_h   // Then define it
+using namespace std;
 
 // Start Rational
 class Rational {
