@@ -40,24 +40,54 @@ int main(int argc, const char * argv[]) {
     displayNumbers (n1, n2, n3, "Values of n1, n2, and n3 before the start of each test");
     
     // Test operator+
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n1 = n2 + n3;                     // n2 + n3 = 3/4 + 2/3 = 9/12 + 8/12 = 17/12
+    displayNumbers(n1, n2, n3, "n1 = n2 + n3 (n1 should be 17/12)");
     
     // Test operator+=
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n2 += n3;                         // n2 + n3 = 3/4 + 2/3 = 9/12 + 8/12 = 17/12
+    displayNumbers(n1, n2, n3, "n2 += n3 (n2 should be 17/12)");
     
     // Test operator-
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n1 = n2 - n3;
+    displayNumbers(n1, n2, n3, "n1 = n2 - n3 (n1 should be 1/12)");
     
     // Test operator-=
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n2 -= n3;
+    displayNumbers(n1, n2, n3, "n2 -= n3 (n2 should be 1/12)");
     
     // Test operator*
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n1 = n2 * n3;
+    displayNumbers(n1, n2, n3, "n1 = n2 * n3 (n1 should be 6/12)");
     
     // Test operator*=
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n2 *= n3;
+    displayNumbers(n1, n2, n3, "n2 *= n3 (n2 should be 6/12)");
     
     // Test operator/
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n1 = n2 / n3;
+    displayNumbers(n1, n2, n3, "n1 = n2 / n3 (n1 should be 9/8)");
     
     // Test operator/=
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    n2 /= n3;
+    displayNumbers(n1, n2, n3, "n2 /= n3 (n2 should be 9/8)");
     
     // Test operator==
+    initializeNumbers (n1, n2, n3);   // Reset values EVERY test
+    bool isEqual;                     // Variable for display
+    isEqual = (n2 == n3);             // Should print false
+    cout << "n2 is equal to n3 = " << isEqual << endl;
     
     // Test operator double
+    cout << "        n2 = " << n2 << endl;
+    cout << "double(n2) = " << double(n2) << endl;
     return 0;
 }   // End main
 
