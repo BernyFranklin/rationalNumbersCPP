@@ -23,10 +23,15 @@ public:
     Rational (int num = 0, int denom = 1);   // Default constructor
     
     Rational add (const Rational right);
-    Rational operator+  (const Rational right);   // + addition operator
+    Rational operator+  (const Rational right);   // +  addition operator
     Rational operator+= (const Rational right);   // += addition assignment operator
-    Rational operator-  (const Rational right);   // - subtraction operator
+    Rational operator-  (const Rational right);   // -  subtraction operator
     Rational operator-= (const Rational right);   // -= subtraction assignment operator
+    Rational operator*  (const Rational right);   // *  multiplication operator
+    Rational operator*= (const Rational right);   // *= multiplication assignment operator
+    Rational operator/  (const Rational right);   // /  divvision operator
+    Rational operator/= (const Rational right);   // /= division assignment operator
+    Rational operator== (const Rational right);   // == equality operator
     
     void display();
     operator double() const;   // Convert Rational to double
