@@ -75,7 +75,7 @@ Rational Rational::operator+= (Rational right) {
     return setRational(numerator, denominator);
 }   // End of Rational::operator+=
 
-// The operator- method does the same thing as the add method
+// Operator- method does the same thing as the add method
 Rational Rational::operator- (Rational right) {
     // Create local (temp) variables
     int newNumerator;
@@ -99,6 +99,65 @@ Rational Rational::operator-= (Rational right) {
     // Fix the sign, reduce the fraction and return the current object
     return setRational(numerator, denominator);
 }   // End of Rational::operator-=
+
+// Operator* method
+Rational Rational::operator* (Rational right) {
+    // Create new local (temp) variables
+    int newNumerator;
+    int newDenominator;
+    
+    // Compute the result and save to local variables
+    // The current object's numerator and and denominator are not changed
+    newNumerator = numerator*right.numerator;
+    newDenominator = denominator*right.denominator;
+    
+    // Create new Rational object with the result and return it
+    return Rational(newNumerator, newDenominator);
+}   // End of Operator*
+
+// Operator*= method
+Rational Rational::operator*= (Rational right) {
+    // The current object is update with the results of the *=
+    numerator = numerator*right.numerator;
+    denominator = denominator*right.denominator;
+    
+    // Fix the sign, reduce the fraction and return the current object
+    return setRational(numerator, denominator);
+}   // End of Operator*=
+
+// Operator/ method
+Rational Rational::operator/ (Rational right) {
+    // Create new local (temp) variables
+    int newNumerator;
+    int newDenominator;
+    
+    // Compute the result and save to local variables
+    // The current object's numerator and and denominator are not changed
+    newNumerator = numerator*right.denominator;
+    newDenominator = denominator*right.numerator;
+    
+    // Create new Rational onject with the result and return it
+    return Rational(newNumerator, newDenominator);
+}   // End of Operator/
+
+// Operator/= method
+Rational Rational::operator/= (Rational right) {
+    // The current object is updated with the result of the /=
+    numerator = numerator*right.denominator;
+    denominator = denominator*right.numerator;
+    
+    // Fix the sign, reduce the fraction and return the current object
+    return setRational(numerator, denominator);
+}   // End of Operator/=
+
+// Operator== method
+Rational Rational::operator== (Rational right) {
+    // The object is compared for equality to the object on the right
+    if (numerator == right.numerator && denominator == right.denominator)
+        return true;
+    else
+        return false;
+}   // End of Operator==
 
 // Operator double() method
 Rational::operator double() const {   // Converts rational into double
