@@ -2,8 +2,8 @@
  * RationalNumbersCPP Version#1.0
  * Frank Bernal
  * CIS 054 C/C++ Programming
- * Input
- * Output
+ * Input: Developer input for n1, n2, and n3
+ * Output: Display for all overloaded operators in test
  * 08 Apr 2022
  */
 
@@ -42,7 +42,7 @@ int main(int argc, const char * argv[]) {
     // Display values of n1, n2, and n3 before each test
     initializeNumbers (n1, n2, n3);
     displayNumbers (n1, n2, n3, "Values of n1, n2, and n3 before the start of each test");
-    
+    cout << "------------------------------------------------------------------------------" << endl;
     // Test operator+
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     n1 = n2 + n3;                     // n2 + n3 = 3/4 + 2/3 = 9/12 + 8/12 = 17/12
@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
     // Test operator+=
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     n2 += n3;                         // n2 + n3 = 3/4 + 2/3 = 9/12 + 8/12 = 17/12
-    displayNumbers(n1, n2, n3, "n2 += n3 (n2 should be 17/12)");
+    displayNumbers(n1, n2, n3, "n2 += n3     (n2 should be 17/12)");
     
     // Test operator-
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
@@ -61,17 +61,17 @@ int main(int argc, const char * argv[]) {
     // Test operator-=
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     n2 -= n3;
-    displayNumbers(n1, n2, n3, "n2 -= n3 (n2 should be 1/12)");
+    displayNumbers(n1, n2, n3, "n2 -= n3     (n2 should be 1/12)");
     
     // Test operator*
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     n1 = n2 * n3;
-    displayNumbers(n1, n2, n3, "n1 = n2 * n3 (n1 should be 6/12)");
+    displayNumbers(n1, n2, n3, "n1 = n2 * n3 (n1 should be 1/2)");
     
     // Test operator*=
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     n2 *= n3;
-    displayNumbers(n1, n2, n3, "n2 *= n3 (n2 should be 6/12)");
+    displayNumbers(n1, n2, n3, "n2 *= n3     (n2 should be 1/2)");
     
     // Test operator/
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
@@ -81,14 +81,14 @@ int main(int argc, const char * argv[]) {
     // Test operator/=
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     n2 /= n3;
-    displayNumbers(n1, n2, n3, "n2 /= n3 (n2 should be 9/8)");
+    displayNumbers(n1, n2, n3, "n2 /= n3     (n2 should be 9/8)");
     cout << "==============================================================================" << endl;
     cout << " Test for Equality" << endl;
     cout << "==============================================================================" << endl;
     // Test operator==
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     bool isEqual;                     // Variable for display
-    isEqual = (n2 == n3);             // Should print false
+    isEqual = (n2 == n3);             // Set true or false
     cout << std::boolalpha << " n2(" << n2 << ") is equal to n3(" << n3 << ") = " << isEqual << endl<< endl;
     cout << "==============================================================================" << endl;
     cout << " Test conversion from rational to double" << endl;
