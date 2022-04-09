@@ -176,6 +176,7 @@ void Rational::display() {
 // declared outside of the class with no :: scope resolution operator.
 // All functions arguments must have their class defined
 ostream &operator<< (ostream &out, Rational const &r) {
-    out << r.numerator << '/' << r.denominator;
+    out << std::right << setw(2) << r.numerator << '/'
+        << std::left << setw(2) << r.denominator;
     return out;   // This is to keep the stream flowing
 }   // End of &operator<<
