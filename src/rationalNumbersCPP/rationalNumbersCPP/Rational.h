@@ -5,6 +5,8 @@
 
 #ifndef Rational_h   // If this isn't defined already
 #define Rational_h   // Then define it
+
+#include <iostream>
 using namespace std;
 
 // Start Rational

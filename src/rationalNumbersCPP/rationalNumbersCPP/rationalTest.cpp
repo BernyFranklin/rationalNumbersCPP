@@ -28,7 +28,11 @@ int main(int argc, const char * argv[]) {
     Rational n3;
     
     // Title at the top of the display
-    cout << "    n1     n2   n3\n  ==================\n" << endl;
+    cout << "==============================================================================" << endl;
+    cout << " Test each overloaded operator" << endl;
+    cout << "==============================================================================" << endl;
+    cout << "   n1     n2    n3  \tDescription" << endl;
+    cout << "==============================================================================" << endl;
     
     //------------ For each overloaded operator ------------------------
     //------------ initialize the values for n1, n2, and n3 ------------
@@ -78,16 +82,20 @@ int main(int argc, const char * argv[]) {
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     n2 /= n3;
     displayNumbers(n1, n2, n3, "n2 /= n3 (n2 should be 9/8)");
-    
+    cout << "==============================================================================" << endl;
+    cout << " Test for Equality" << endl;
+    cout << "==============================================================================" << endl;
     // Test operator==
     initializeNumbers (n1, n2, n3);   // Reset values EVERY test
     bool isEqual;                     // Variable for display
     isEqual = (n2 == n3);             // Should print false
-    cout << "n2 is equal to n3 = " << isEqual << endl;
-    
+    cout << std::boolalpha << "n2 is equal to n3 = " << isEqual << endl<< endl;
+    cout << "==============================================================================" << endl;
+    cout << " Test conversion from rational to double" << endl;
+    cout << "==============================================================================" << endl;
     // Test operator double
     cout << "        n2 = " << n2 << endl;
-    cout << "double(n2) = " << double(n2) << endl;
+    cout << "double(n2) = " << double(n2) << endl << endl;
     return 0;
 }   // End main
 
@@ -100,5 +108,5 @@ void initializeNumbers(Rational &n1, Rational &n2, Rational &n3) {
 
 // Display each of the rational numbersusing the friend function <<
 void displayNumbers (Rational n1, Rational n2, Rational n3, const char *msg) {
-    cout << setw(4) << n1 << setw(4) << n2 << setw(4) << n3 << "\t" << msg << endl;
+    cout << setw(4) << n1 << setw(4) << n2 << setw(4) << n3 << "\t\t" << msg << endl;
 }   // End of displayNumbers

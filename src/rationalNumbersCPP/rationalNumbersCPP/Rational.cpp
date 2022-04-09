@@ -5,7 +5,9 @@
 
 
 #include <iostream>
+#include <iomanip>
 #include "Rational.h"
+
 using namespace std;
 
 // By using the default parameter settings in Rational.h, this
